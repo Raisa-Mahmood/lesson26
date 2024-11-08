@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Parents and Inheritance in Javascript</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        //Parent class
+        class car{
+            constructor(brandname){
+                this.brandname = brandname;
+            }
+            show(){
+                return "I have a " + this.brandname;
+            }
+        }
+        //inherited class
+        class Model extends car{
+            constructor (brandname , modelname){
+                super(brandname);
+                this.modelname = modelname;
+            }
+            display(){
+                return this.show() + "and the modelname is " + this.modelname;
+            }
+        }
+        n1 = new Model("Renault" , "Duster");
+        document.getElementById("p1").innerHTML= n1.display();
+         document.getElementById("p2").innerHTML = n1.show();
+    </script>
+</body>
+</html>

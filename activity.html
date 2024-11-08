@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Classes in Javscript</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        class student{
+            constructor (name , age){
+                this.name=name;
+                this.age = age;
+            }
+            age1(){
+                return "The age is "+this.age;
+            }
+        }
+        s1=new student("Rima",13);
+        document.getElementById("p1").innerHTML=s1.age1();
+        document.getElementById("p2").innerHTML=s1.name;
+
+        class student2{
+            constructor (name , year){
+                this.name = name;
+                this.year = year;
+            }
+            year1(){
+                var date = new Date();
+                return  + (date.getFullYear()-this.year);
+            }
+        }
+        s2= new student2("Mina" ,2009);
+        document.getElementById("p3").innerHTML = s2.name + " is " + s2.year1();
+        
+    </script>
+</body>
+</html>
